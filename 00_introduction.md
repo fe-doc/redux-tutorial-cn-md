@@ -79,7 +79,6 @@
  并且当所有 Store 响应了 action 后，最终所有 View 都会更新。由此可见，数据总是沿一个方向进行流动：
 `    action -> store -> view -> action -> store -> view -> action -> ...`
 
- 上面我们首先从 action 开始我们的用例，
- 下面让我们同样以 action 和 action creator 来开始我们的教程。
+上面我们首先从 action 开始我们的用例，下面让我们同样以 action 和 action creator 来开始我们的教程。
 
- 进入到下一个教程：[01_simple-action-creator.js]()
+进入到下一个教程：[01_simple-action-creator.js]()
