@@ -98,7 +98,7 @@ console.log('store_3 state after initialization:', store_3.getState())
 - 3) 注意 { message: action.value } 是怎么被合并到当前 state 来形成新 state 的， 这全要感谢牛逼的 ES7 notation (Object Spread): { ...state, message: action.value }
 - 4) 还要注意：之所以这个例子能用ES7 Object Spread notation ，是因为它只对 state 里的  { message: action.value} 做了浅拷贝（也就是说， state 第一个层级的属性直接被 { message: action.value } 覆盖掉了 —— 与之相对，其实也有优雅的合并方式 ）  但是如果数据结构更复杂或者是嵌套的，那处理state更新的时候，很可能还需要考虑一些完全不同的做法：
     - 可以考虑： Immutable.js (https://facebook.github.io/immutable-js/)
-     - 可以考虑： Object.assign (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
+    - 可以考虑： Object.assign (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
     - 可以考虑： 手工合并
     - 又或者考虑用其它任何能满足需要且适合 state 结构的方法，Redex 对此是全无预设的方式的（要记得 Redux 只是个状态的容器）。
 
